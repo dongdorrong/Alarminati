@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alarminati-agent
+spec:
+  replicas: {{ .Values.agent.replicaCount }}
+  selector:
+    matchLabels:
+      app: alarminati-agent
+  template:
+    metadata:
+      labels:
+        app: alarminati-agent
+    spec:
+      containers:
+      - name: agent
+        image: {{ .Values.agent.image }}
+        ports:
+        - containerPort: {{ .Values.agent.port }}

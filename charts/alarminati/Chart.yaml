@@ -1,0 +1,6 @@
+apiVersion: v2
+name: alarminati
+description: A lightweight distributed alert delivery system for Kubernetes clusters
+type: application
+version: 0.1.0
+appVersion: "1.0.0"

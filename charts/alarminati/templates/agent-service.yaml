@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: alarminati-agent
+spec:
+  selector:
+    app: alarminati-agent
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: {{ .Values.agent.port }}

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: alarminati-ui
+spec:
+  selector:
+    app: alarminati-ui
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: {{ .Values.ui.port }}
